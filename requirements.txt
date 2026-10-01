@@ -1,0 +1,4 @@
+# PowerGuard OS Monitor - Requirements
+PyQt6>=6.6.0
+psutil>=5.9.0
+pyqtgraph>=0.13.0
