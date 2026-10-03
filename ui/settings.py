@@ -3,8 +3,15 @@ Settings page for PowerGuard OS Monitor.
 Provides threshold configuration, background refresh frequency,
 automatic optimization policies, notifications, and tray preferences.
 """
+import sys
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 from PyQt6.QtWidgets import (
-    QWidget, QVBoxLayout, QHBoxLayout, QLabel, QComboBox,
+    QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QComboBox,
     QSpinBox, QDoubleSpinBox, QCheckBox, QPushButton,
     QFrame, QScrollArea, QMessageBox
 )
@@ -280,3 +287,15 @@ class SettingsPage(QWidget):
     def _reset_defaults(self):
         defaults = SystemSettings()
         self._populate_fields(defaults)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    app.setApplicationName("PowerGuard Settings")
+    db = DatabaseManager()
+
+    window = SettingsPage(db)
+    window.resize(980, 760)
+    window.show()
+
+    sys.exit(app.exec())

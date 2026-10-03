@@ -9,7 +9,17 @@
 
 ---
 
-## 1. Project Overview
+## 1. Quick Start
+
+Use either of these from the project root to launch the app without worrying about Python import paths:
+
+- Windows PowerShell: `./run_project.ps1`
+- Windows Command Prompt / double-click: `run_project.bat`
+- Direct Python entry point: `python main.py`
+
+If you run the Settings UI file directly, the project root is now added automatically so it still works reliably.
+
+## 2. Project Overview
 
 **PowerGuard OS Monitor** is a desktop application designed for Windows laptops and workstations. It continuously monitors live system vitals—**Battery, CPU, RAM, Storage Disks, and Running Processes**—and autonomously executes intelligent power-saving actions when battery reserves drop.
 
@@ -21,7 +31,7 @@ Unlike static UI mockups, **PowerGuard functions exclusively on real hardware te
 
 ---
 
-## 2. Visual Identity & Aesthetics (Design 2)
+## 3. Visual Identity & Aesthetics (Design 2)
 
 PowerGuard strictly adheres to **Design 2 — Warm Beige / Soft Sand** from the project design specifications:
 
@@ -37,7 +47,7 @@ Purple is strictly utilized as a refined accent (selected navigation, active sta
 
 ---
 
-## 3. Key Features
+## 4. Key Features
 
 ### 📊 Live Dashboard
 - **Greeting & System Status:** Dynamic greeting by time of day, active status indicator (`● System Active`), and real-time clock.
@@ -83,7 +93,7 @@ Purple is strictly utilized as a refined accent (selected navigation, active sta
 
 ---
 
-## 4. Visual Programming Concepts Demonstrated
+## 5. Visual Programming Concepts Demonstrated
 
 This project showcases core principles of **Visual Programming (VP)**:
 
@@ -102,7 +112,7 @@ This project showcases core principles of **Visual Programming (VP)**:
 
 ---
 
-## 5. Project Architecture
+## 6. Project Architecture
 
 ```
 PowerGuard/
@@ -161,7 +171,7 @@ PowerGuard/
 
 ---
 
-## 6. Installation & Setup
+## 7. Installation & Setup
 
 ### Prerequisites
 - Windows 10 or Windows 11
@@ -197,7 +207,7 @@ PowerGuard/
 
 ---
 
-## 7. Administrator Permissions Note
+## 8. Administrator Permissions Note
 
 PowerGuard does **not** require administrator permissions for routine monitoring (CPU, RAM, Disk, Battery, Process viewing, Wishlist management, Logging, and CSV export).
 
@@ -208,7 +218,7 @@ If an action is blocked by Windows security, PowerGuard handles it gracefully wi
 
 ---
 
-## 8. Database Schema
+## 9. Database Schema
 
 Stored in `powerguard.db` in SQLite:
 
@@ -220,7 +230,7 @@ Stored in `powerguard.db` in SQLite:
 
 ---
 
-## 9. Academic Project Credits
+## 10. Academic Project Credits
 
 - **Course:** Visual Programming (VP)
 - **Project Title:** PowerGuard OS Monitor
